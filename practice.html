@@ -7,7 +7,7 @@
 <meta name="description" content="HKUST-ELPA 非官方口语题库练习，提供题目检索、模拟计时、学习状态和本地笔记。">
 <meta name="theme-color" content="#1e3a8a">
 <link rel="stylesheet" href="./assets/css/practice.css?v=81f847393a53">
-<script src="./assets/js/theme-init.js?v=2e11146ada0c"></script><script src="./assets/js/translations.js?v=86c969780921"></script><script defer src="./assets/js/language.js?v=9a60a2d5de96"></script><script defer src="./assets/js/site.js?v=d04de8950c71"></script>
+<script src="./assets/js/theme-init.js?v=2e11146ada0c"></script><script src="./assets/js/translations.js?v=72975de5c174"></script><script defer src="./assets/js/language.js?v=2bcd478fed7d"></script><script defer src="./assets/js/site.js?v=d04de8950c71"></script>
 </head>
 <body class="elpa-body page-practice">
 <a class="skip-link" href="#main">跳转到正文</a><div class="shell"><aside class="sidebar" id="sidebar" aria-label="侧边导航"><a class="brand" href="./index.html" aria-label="HKUST-ELPA 首页"><img class="brand-logo" src="./assets/images/hkust-elpa.png" alt="HKUST-ELPA" width="512" height="512"></a><nav class="elpa-nav" aria-label="主导航"><a href="./index.html">首页</a><a href="./guide.html">指南与经验</a><a href="./practice.html" class="active" aria-current="page">题库练习</a><a href="./sources.html">资料来源</a><a class="elpa-nav-submit nav-contribute" href="./submit.html">投稿分享 <span class="link-arrow" aria-hidden="true"></span></a><a href="./community.html" class="nav-community">共建与联系 <span class="link-arrow" aria-hidden="true"></span></a></nav><div class="sidebar-bottom"><button class="language-toggle" id="language-toggle" type="button" aria-label="Switch to English">EN</button><button class="sidebar-theme" id="theme-toggle" type="button" data-mode="system" aria-label="当前为跟随系统，切换到浅色主题"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g data-theme-icon="system"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8m-4-4v4"/></g><g data-theme-icon="light"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.4 1.4m11.2 11.2L19 19M5 19l1.4-1.4M17.6 6.4 19 5"/></g><g data-theme-icon="dark"><path d="M20.5 14A8.5 8.5 0 0 1 10 3.5 8.5 8.5 0 1 0 20.5 14Z"/></g></svg><span id="theme-label">跟随系统</span></button></div></aside><div class="page"><header class="topbar" aria-label="移动端导航栏"><a class="mobile-brand" href="./index.html" aria-label="HKUST-ELPA 首页"><img class="mobile-brand-logo" src="./assets/images/hkust-elpa.png" alt="HKUST-ELPA" width="512" height="512"></a><button class="icon-button menu-button" id="menu-toggle" type="button" aria-label="打开导航" aria-controls="sidebar" aria-expanded="false"><span class="menu-lines" aria-hidden="true"><span></span><span></span><span></span></span></button></header><div class="campus-banner" aria-hidden="true"></div>
@@ -44,7 +44,7 @@
       <label class="sr-only" for="searchInput">搜索题目或关键词</label>
       <div class="search-field">
         <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.2 4.2"/></svg></span>
-        <input type="search" id="searchInput" name="query" aria-label="搜索题目 / Search questions" placeholder="搜索题目 / Search questions" enterkeyhint="search" autocomplete="off">
+        <input type="search" id="searchInput" name="query" aria-label="搜索题目" data-i18n-aria-label="Search Questions" placeholder="搜索题目" data-i18n-placeholder="Search Questions" enterkeyhint="search" autocomplete="off">
         <button type="button" class="search-clear" id="searchClear" title="清空搜索" aria-label="清空搜索">×</button>
       </div>
       <button type="submit" class="search-submit" id="searchSubmit">搜索</button>
@@ -55,12 +55,12 @@
     </dialog>
     <label class="sr-only" for="sessionFilter">按考试场次筛选</label>
     <select id="sessionFilter" class="filter-select" aria-label="按考试场次筛选">
-      <option value="">全部场次 / All sessions</option>
+      <option value="" data-i18n-en="All Sessions">全部场次</option>
     </select>
     <label for="statusFilter" class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">练习状态筛选</label>
     <select id="statusFilter" class="filter-select" aria-label="练习状态筛选">
-      <option value="all">备考状态 / Status</option><option value="new">未练 / New</option>
-      <option value="doing">练习中 / In progress</option><option value="done">已掌握 / Mastered</option>
+      <option value="all" data-i18n-en="Study Status">备考状态</option><option value="new" data-i18n-en="Not Started">未练</option>
+      <option value="doing" data-i18n-en="In Progress">练习中</option><option value="done" data-i18n-en="Mastered">已掌握</option>
     </select>
     <span class="stat-pill">显示 <b id="matchCount">0</b> / <b id="totalCount">0</b> 条</span>
     <div hidden id="legacyDataControls">
