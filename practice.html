@@ -6,7 +6,7 @@
 <title>题库练习｜HKUST-ELPA</title><link rel="prefetch" href="./sources.html"><link rel="stylesheet" href="./assets/css/site.css?v=8907682da568"><link rel="stylesheet" href="./assets/css/shell.css?v=fa963dfc4a31"><link rel="icon" type="image/svg+xml" href="./assets/icons/hkust-elpa.svg">
 <meta name="description" content="HKUST-ELPA 非官方口语题库练习，提供题目检索、模拟计时、学习状态和本地笔记。">
 <meta name="theme-color" content="#1e3a8a">
-<link rel="stylesheet" href="./assets/css/practice.css?v=96365e799f12">
+<link rel="stylesheet" href="./assets/css/practice.css?v=bbeea88822e9">
 <script src="./assets/js/theme-init.js?v=2e11146ada0c"></script><script src="./assets/js/translations.js?v=72975de5c174"></script><script defer src="./assets/js/language.js?v=2bcd478fed7d"></script><script defer src="./assets/js/site.js?v=d04de8950c71"></script>
 </head>
 <body class="elpa-body page-practice">
@@ -63,6 +63,9 @@
       <option value="doing" data-i18n-en="In Progress">练习中</option><option value="done" data-i18n-en="Mastered">已掌握</option>
     </select>
     <span class="stat-pill">显示 <b id="matchCount">0</b> / <b id="totalCount">0</b> 条</span>
+  <button id="practiceLauncher" class="practice-launcher" type="button" aria-controls="timerPanel" aria-expanded="false" aria-label="打开练习工具">
+    <span aria-hidden="true">⏱</span> <span id="practiceLauncherText">练习 <span class="elpa-en-inline" lang="en">Practice</span></span>
+  </button>
     <div hidden id="legacyDataControls">
     <button class="save-top" id="saveTopBtn" title="手动保存；未关联文件夹时学习记录仍自动保存在本浏览器">💾 保存</button>
     <button class="toolbar-action" id="backupBtn" type="button" title="下载独立的 JSON 备份文件">⬇ 备份</button>
@@ -145,9 +148,7 @@
     </div>
     <button class="timer-btn timer-draw" id="timerDrill" type="button">🎲 随机抽题 <span class="elpa-en-inline" lang="en">Random question</span></button>
   </section>
-  <button id="practiceLauncher" class="practice-launcher" type="button" aria-controls="timerPanel" aria-expanded="false" aria-label="打开练习工具">
-    <span aria-hidden="true">⏱</span> <span id="practiceLauncherText">练习 <span class="elpa-en-inline" lang="en">Practice</span></span>
-  </button>
+
 
   <!-- Progress -->
   <div class="progress-card">
